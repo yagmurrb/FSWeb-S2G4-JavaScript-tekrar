@@ -50,8 +50,9 @@ function KareninAlani(kenaruzunlugu) {
 	4. Hesaplanan çemberin çevresi döndürülecektir.
 */
 
-function CemberinCevresi(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinCevresi(yaricap) {
+  const cevre = 2 * pi * yaricap;
+  return cevre;
 }
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -64,8 +65,10 @@ function CemberinCevresi(/* kodlar buraya */) {
 	4. Hesaplanan çemberin alanı döndürülecektir.
 */
 
-function CemberinAlani(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinAlani(yaricap , pin) {
+  const yaricap = 15
+  const alan = pi * (yaricap ** 2)
+  return alan ;
 }
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -98,28 +101,49 @@ let ucetambolunenler,
   tekraredensayilar;
 
 // 3a çözümü
+  
 
-/* kodlar buraya */
+  enkucuk = [0];
+  enbuyuk = [0];
+
+ for (let i = 1; i < sayilar.length; i++) {
+  if (sayilar[i] < enkucuk) {
+      enkucuk = sayilar[i];
+  }
+  
+  if (sayilar[i] > enbuyuk) {
+      enbuyuk = sayilar[i];
+  }
+}
 
 // 3b çözümü:
-
-/* kodlar buraya */
+ucetambolunenler = []
+sayilar.forEach(function(sayi) {
+  if (sayi % 3 === 0) {
+      ucetambolunenler.push(sayi);
+  }
+});
 
 // 3c çözümü:
 
-/* kodlar buraya */
+ ucebolunenlerintoplami = ucetambolunenler.reduce(function(toplam, sayi) {
+  return toplam + sayi;
+}, 0);
 
 // 3d çözümü
 
-/* kodlar buraya */
+besyuzdenkucuksayilar = sayilar.filter(function(sayi) {
+  return sayi < 500;
+});
 
 // 3e çözümü
 
-/* kodlar buraya */
+siralisayilar = besyuzdenkucuksayilar.slice().sort(function(a, b) {
+  return a - b;
+});
 
 // 3f çözümü
 
-/* kodlar buraya */
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
